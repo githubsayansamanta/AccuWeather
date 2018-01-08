@@ -1,0 +1,36 @@
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">AccuWeather</span>
+    </div>
+    <!-- Tabs -->
+    <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+      <a href="#fixed-tab-1" class="mdl-layout__tab is-active">Weather Info</a>
+      <a href="#fixed-tab-2" class="mdl-layout__tab">Weather Graph</a>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <section class="mdl-layout__tab-panel is-active demo-card-image" id="fixed-tab-1" *ngIf="detailsInfo">
+      <div class="page-content" *ngFor="let wth of detailsInfo">
+        <h2>Last Updated  - {{ wth.lastBuildDate }}</h2>
+        <h3>
+          Country - {{ wth.location.country }},
+          City - {{ wth.location.city }},
+          Region - {{ wth.location.region }}        
+        </h3>
+        <h3>Astronomy - 
+          {{ wth.astronomy.sunrise }} Sunrise,
+          {{ wth.astronomy.sunset }} Sunset
+        </h3>
+      </div>
+    </section>
+    <section class="mdl-layout__tab-panel" id="fixed-tab-2">
+      <div class="page-content">
+        <!-- Your content goes here -->
+        <h1>Hello Sayan</h1>
+        <h2>Hello Sayan</h2>
+      </div>
+    </section>
+  </main>
+</div>
